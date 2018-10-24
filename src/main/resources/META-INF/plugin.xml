@@ -1,7 +1,8 @@
 <idea-plugin>
     <id>le.cloud.RockIt</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <name>RockIt</name>
+    <version>0.0.1</version>
+    <vendor email="lehaoson@gmail.com" url="http://www.cloudle.github.io">Cloud Le</vendor>
 
     <description><![CDATA[
     Enter short description for your plugin here.<br>
@@ -10,15 +11,17 @@
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
-    <!-- uncomment to enable plugin in all products
+    <!-- uncomment to enable plugin in all products -->
     <depends>com.intellij.modules.lang</depends>
-    -->
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
+        <group id="MyPlugin.SampleMenu" text="Greeting" description="Greeting menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="Myplugin.Textboxes" class="HelloAction" text="Hello" description="Says hello"/>
+        </group>
     </actions>
 </idea-plugin>
