@@ -1,0 +1,37 @@
+buildscript {
+	repositories {
+		maven { url 'http://dl.bintray.com/jetbrains/intellij-plugin-service' }
+	}
+}
+
+plugins {
+	id "org.jetbrains.intellij" version "0.3.12"
+}
+
+apply plugin: "idea"
+apply plugin: "java"
+apply plugin: "org.jetbrains.intellij"
+
+group 'le.cloud'
+version = "0.1"
+
+sourceCompatibility = 1.8
+
+intellij {
+	version '2018.2.5'
+	pluginName 'Rock-IntelliJ-Plugin'
+	updateSinceUntilBuild false
+	plugins 'coverage'
+}
+
+patchPluginXml {
+	changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}
+
+task hello {
+	doLast {
+		println "Hello, Gradle"
+	}
+}
