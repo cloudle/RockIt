@@ -1,6 +1,6 @@
 <idea-plugin>
 	<id>le.cloud.rock</id>
-	<name>RockIt</name>
+	<name>Rock</name>
 	<version>0.0.1</version>
 	<vendor email="lehaoson@gmail.com" url="http://www.cloudle.github.io">Cloud Le</vendor>
 
@@ -15,6 +15,8 @@
 
 	<extensions defaultExtensionNs="com.intellij">
 		<fileTypeFactory implementation="le.cloud.RockFileTypeFactory"/>
+		<lang.parserDefinition language="Rock" implementationClass="le.cloud.RockParserDefinition"/>
+		<lang.syntaxHighlighterFactory language="Rock" implementationClass="le.cloud.RockSyntaxHighlighterFactory"/>
 	</extensions>
 
 	<actions>

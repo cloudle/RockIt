@@ -1,0 +1,20 @@
+{
+  parserClass="le.cloud.parser.RockParser"
+
+  extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Rock"
+  psiImplClassSuffix="Impl"
+  psiPackage="le.cloud.psi"
+  psiImplPackage="le.cloud.psi.impl"
+
+  elementTypeHolderClass="le.cloud.psi.RockTypes"
+  elementTypeClass="le.cloud.psi.RockElementType"
+  tokenTypeClass="le.cloud.psi.RockTokenType"
+}
+
+rockFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY
