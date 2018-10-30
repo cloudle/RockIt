@@ -17,6 +17,8 @@
 		<fileTypeFactory implementation="le.cloud.RockFileTypeFactory"/>
 		<lang.parserDefinition language="Rock" implementationClass="le.cloud.RockParserDefinition"/>
 		<lang.syntaxHighlighterFactory language="Rock" implementationClass="le.cloud.RockSyntaxHighlighterFactory"/>
+		<colorSettingsPage implementation="le.cloud.RockColorSettingsPage"/>
+
 	</extensions>
 
 	<actions>

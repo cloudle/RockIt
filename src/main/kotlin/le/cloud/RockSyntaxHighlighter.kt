@@ -33,11 +33,11 @@ class RockSyntaxHighlighter : SyntaxHighlighterBase() {
 	}
 
 	companion object {
-		val SEPARATOR = createTextAttributesKey("SIMPLE_SEPARATOR", DefaultLanguageHighlighterColors.OPERATION_SIGN)
-		val KEY = createTextAttributesKey("SIMPLE_KEY", DefaultLanguageHighlighterColors.KEYWORD)
-		val VALUE = createTextAttributesKey("SIMPLE_VALUE", DefaultLanguageHighlighterColors.STRING)
-		val COMMENT = createTextAttributesKey("SIMPLE_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT)
-		val BAD_CHARACTER = createTextAttributesKey("SIMPLE_BAD_CHARACTER", HighlighterColors.BAD_CHARACTER)
+		val SEPARATOR = createTextAttributesKey("ROCK_SEPARATOR", DefaultLanguageHighlighterColors.OPERATION_SIGN)
+		val KEY = createTextAttributesKey("ROCK_KEY", DefaultLanguageHighlighterColors.KEYWORD)
+		val VALUE = createTextAttributesKey("ROCK_VALUE", DefaultLanguageHighlighterColors.STRING)
+		val COMMENT = createTextAttributesKey("ROCK_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT)
+		val BAD_CHARACTER = createTextAttributesKey("ROCK_BAD_CHARACTER", HighlighterColors.BAD_CHARACTER)
 
 		private val BAD_CHAR_KEYS = arrayOf(BAD_CHARACTER)
 		private val SEPARATOR_KEYS = arrayOf(SEPARATOR)
