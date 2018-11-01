@@ -19,17 +19,9 @@ class RockColorSettingsPage : ColorSettingsPage {
 
 	override fun getDemoText(): String {
 		return "# You are reading the \".properties\" entry.\n" +
-				"! The exclamation mark can also mark text as comments.\n" +
-				"website = http://en.wikipedia.org/\n" +
-				"language = English\n" +
-				"# The backslash below tells the application to continue reading\n" +
-				"# the value onto the next line.\n" +
-				"message = Welcome to \\\n" +
-				"          Wikipedia!\n" +
-				"# Add spaces to the key\n" +
-				"key\\ with\\ spaces = This is the value that could be looked up with the key \"key with spaces\".\n" +
-				"# Unicode\n" +
-				"tab : \\u0009"
+			"# The exclamation mark can also mark text as comments.\n" +
+			"website = \"http://en.wikipedia.org/\"\n" +
+			"language = 10"
 	}
 
 	override fun getAdditionalHighlightingTagToDescriptorMap(): Map<String, TextAttributesKey>? {
@@ -49,6 +41,16 @@ class RockColorSettingsPage : ColorSettingsPage {
 	}
 
 	companion object {
-		private val DESCRIPTORS = arrayOf(AttributesDescriptor("Key", RockSyntaxHighlighter.KEY), AttributesDescriptor("Separator", RockSyntaxHighlighter.SEPARATOR), AttributesDescriptor("Value", RockSyntaxHighlighter.VALUE))
+		private val DESCRIPTORS = arrayOf(
+				AttributesDescriptor("Key", RockSyntaxHighlighter.KEY),
+				AttributesDescriptor("Separator", RockSyntaxHighlighter.SEPARATOR),
+				AttributesDescriptor("Value", RockSyntaxHighlighter.VALUE),
+				AttributesDescriptor("Number", RockSyntaxHighlighter.NUMBER),
+				AttributesDescriptor("String", RockSyntaxHighlighter.STRING),
+				AttributesDescriptor("Operator", RockSyntaxHighlighter.OPERATOR),
+				AttributesDescriptor("Keyword", RockSyntaxHighlighter.KEYWORD),
+				AttributesDescriptor("Braces", RockSyntaxHighlighter.BRACE),
+				AttributesDescriptor("Parenthesis", RockSyntaxHighlighter.PARENTHESIS),
+				AttributesDescriptor("Identifier", RockSyntaxHighlighter.IDENTIFIER))
 	}
 }

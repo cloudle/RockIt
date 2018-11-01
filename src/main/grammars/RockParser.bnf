@@ -11,10 +11,18 @@
   elementTypeHolderClass="le.cloud.psi.RockTypes"
   elementTypeClass="le.cloud.psi.RockElementType"
   tokenTypeClass="le.cloud.psi.RockTokenType"
+
+  psiImplUtilClass="le.cloud.psi.impl.RockPsiImplUtil"
 }
 
 rockFile ::= item_*
 
-private item_ ::= (property|COMMENT|CRLF)
+private item_ ::= (property|
+	NUMBER|STRING|STRING_LITERAL|BOOLEAN|FUNCTION|
+	REGULAR_EXPRESSION|REGULAR_EXPRESSION_LITERAL|REGULAR_EXPRESSION_FLAG|
+	IDENTIFIER|KEYWORD|OPERATOR|ASSIGNMENT|
+	PARENTHESIS|BRACE|BRACKET|SEMI_COLON|COMMA|DOT|ACCESSOR|
+	LINE_TERMINATOR|RESERVED_WORD|BAD_CHARACTER|
+	COMMENT|CRLF|WHITESPACE|HEREDOCS)
 
-property ::= (KEY? SEPARATOR VALUE?) | KEY
+property ::= (KEY? SEPARATOR VALUE?) | KEY {methods=[getKey getValue]}
